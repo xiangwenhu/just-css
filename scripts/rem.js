@@ -6,9 +6,9 @@
       var htmlWidth = Math.max(
         htmlElement.offsetWidth || 0,
         htmlElement.clientWidth || 0,
-        1024
+        1440
       )
-      return (100 / designWidth) * htmlWidth
+      return (10 / designWidth) * htmlWidth
     }
 
     function setFontSize(fontSize) {

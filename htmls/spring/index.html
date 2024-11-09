@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>春天美如画</title>
+    <link href="./index.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <script src="../scripts/rem.js"></script>
+
+    <svg width="0" height="0" style="position:absolute;">
+        <filter id="cloudRandom">
+            <feTurbulence type="fractalNoise" baseFrequency="0.012" numOctaves="4" 
+      seed="0" />     
+            <feDisplacementMap in="SourceGraphic" scale="170" />
+          </filter>
+        <filter id="cloudBasic">
+          <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" seed="100" />     
+          <feDisplacementMap in="SourceGraphic" scale="170" />
+        </filter>
+        <filter id="cloudShadow">
+          <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" seed="10" />     
+          <feDisplacementMap in="SourceGraphic" scale="140" />
+        </filter>
+
+        <filter id="cloudBasic2">
+            <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" seed="80" />     
+            <feDisplacementMap in="SourceGraphic" scale="170" />
+          </filter>
+          <filter id="cloudShadow2">
+            <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" seed="20" />     
+            <feDisplacementMap in="SourceGraphic" scale="140" />
+          </filter>
+
+
+          <filter id="cloudBasic3">
+            <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="4" seed="60" />     
+            <feDisplacementMap in="SourceGraphic" scale="170" />
+          </filter>
+          <filter id="cloudShadow3">
+            <feTurbulence type="fractalNoise" baseFrequency="0.015" numOctaves="2" seed="30" />     
+            <feDisplacementMap in="SourceGraphic" scale="140" />
+          </filter>
+    </svg>
+
+
+    <div class="container">
+
+        <div class="cloud cloud-1" >
+            <i class="cloud-basic"></i>
+            <i class="cloud-mid"></i>
+            <i class="cloud-shadow"></i>
+        </div>
+
+        <div class="cloud cloud-2" style="--base-filter:url(#cloudBasic2);--mid-filter:url(#cloudShadow2);--shadow-filte:url(#cloudShadow2)">
+            <i class="cloud-basic"></i>
+            <i class="cloud-mid"></i>
+            <i class="cloud-shadow"></i>
+        </div>
+
+
+        <div class="cloud cloud-3" style="--base-filter:url(#cloudBasic3);--mid-filter:url(#cloudShadow3);--shadow-filte:url(#cloudShadow3)"">
+            <i class="cloud-basic"></i>
+            <i class="cloud-mid"></i>
+            <i class="cloud-shadow"></i>
+        </div>   
+
+
+        <svg width="22rem" height="22rem" viewBox="-100 -100 200 200" xmlns="http://www.w3.org/2000/svg" class="sun-wave">
+            <path d="M 95 0
+            A 95 95, 0, 0, 1, 79.06 -45.96
+            A 95 95, 0, 0, 1, 45.96 -79.06
+            A 95 95, 0, 0, 1, 0 -95
+            A 95 95, 0, 0, 1, -45.96 -79.06
+            A 95 95, 0, 0, 1, -79.06 -45.96
+            A 95 95, 0, 0, 1, -95 0
+            A 95 95, 0, 0, 1, -79.06 45.96
+            A 95 95, 0, 0, 1, -45.96 79.06
+            A 95 95, 0, 0, 1, 0 95
+            A 95 95, 0, 0, 1, 45.96 79.06
+            A 95 95, 0, 0, 1, 79.06 45.96
+            A 95 95, 0, 0, 1, 95 0 Z"
+         fill="#FFD700" stroke="#000" stroke-width="2"/>
+          </svg>
+
+      <div class="sun">
+        <svg
+          width="5rem"
+          height="2rem"
+          viewBox="0 0 100 50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="eyebrow eyebrow_r"
+        >
+          <path
+            d="M10 40 C 20 10, 80 10, 90 40"
+            stroke="#333"
+            stroke-width="0.2rem"
+            fill="none"
+          ></path>
+        </svg>
+
+        <svg
+          width="5rem"
+          height="2rem"
+          viewBox="0 0 100 50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="eyebrow eyebrow_l"
+        >
+          <path
+            d="M10 40 C 20 10, 80 10, 90 40"
+            stroke="#333"
+            stroke-width="0.2rem"
+            fill="none"
+          ></path>
+        </svg>
+
+        <div class="flush flush_l"></div>
+        <div class="flush flush_r"></div>
+        <svg
+          class="mouth"
+          width="10rem"
+          height="2rem"
+          viewBox="0 0 100 50"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="eyebrow eyebrow_l"
+        >
+          <path
+            d="M10 20 C 20 50, 100 20, 90 10"
+            stroke="#333"
+            stroke-width="0.2rem"
+            fill="none"
+          ></path>
+        </svg>
+      </div>
+    </div>
+  </body>
+
+</html>

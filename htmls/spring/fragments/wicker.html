@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>柳条形状</title>
+
+    <style>
+      .wicker-container {
+        position: relative;
+        width: 400px;
+        height: 300px;
+      }
+
+      .leaf-container {
+        width: 100px;
+        height: 200px;
+        position: relative;
+      }
+
+      .leaf-svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .leaf-1 {
+        transform: rotate(0deg);
+        position: absolute;
+        top: 20px;
+        width: 50px;
+        height: 100px;
+        right: -9px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="wicker-container">
+      <svg
+        width="400"
+        height="300"
+        viewBox="0 0 200 300"
+        xmlns="http://www.w3.org/2000/svg"
+        class="wicker"
+      >
+        <defs>
+          <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color: black; stop-opacity: 1" />
+            <stop offset="100%" style="stop-color: #000; stop-opacity: 1" />
+          </linearGradient>
+        </defs>
+        <path
+          d="M300,0 C220,150 200,200 100,300"
+          stroke="url(#grad1)"
+          fill="none"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-dasharray="100, 0"
+        />
+      </svg>
+      
+      <div class="leaf-container leaf-1" >
+        <svg viewBox="0 50 100 300" class="leaf-svg">
+          <path
+            d="M50,300 C60,290 70,280 80,260 C90,240 80,220 70,200 C60,180 50,160 40,140 C30,120 20,140 10,160 C0,180 10,200 20,220 C30,240 40,260 50,280 C60,300 50,300 50,300"
+            fill="#66ff33"
+          />
+        </svg>
+      </div>
+    </div>
+
+    <svg
+      width="400"
+      height="300"
+      viewBox="0 0 200 300"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" style="stop-color: black; stop-opacity: 1" />
+          <stop offset="100%" style="stop-color: #000; stop-opacity: 1" />
+        </linearGradient>
+      </defs>
+      <path
+        d="M300,0 C220,150 250,200 160,300"
+        stroke="url(#grad1)"
+        fill="none"
+        stroke-width="3"
+        stroke-linecap="round"
+        stroke-dasharray="100, 0"
+      />
+    </svg>
+  </body>
+</html>

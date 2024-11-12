@@ -66,14 +66,16 @@
         transform: rotate(-60deg);
         left: 20px;
         top: -30px;
+        animation: sway-1 2s ease-in-out infinite;
       }
 
       .bird .swing-2 {
         width: 100px;
         transform: rotate(-34deg);
         left: 35px;
-        top: -28px;
+        top: -24px;
         position: absolute;
+        animation: sway-2 2s ease-in-out infinite;
       }
 
       .bird .tail {
@@ -85,6 +87,28 @@
         margin-top: 19px;
         margin-left: -6px;
       }
+
+
+      @keyframes sway-1 {
+        0%,
+        100% {
+          transform: rotate(-60deg)
+        }
+        50% {
+          transform: rotate(-66deg)
+        }
+      }
+
+      @keyframes sway-2 {
+        0%,
+        100% {
+          transform: rotate(-34deg)
+        }
+        50% {
+          transform: rotate(-28deg)
+        }
+      }
+
     </style>
   </head>
   <body>

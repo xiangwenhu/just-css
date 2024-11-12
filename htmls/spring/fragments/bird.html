@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>birde</title>
+    <style>
+      .bird {
+        position: relative;
+        display: flex;
+        margin: 100px;
+      }
+
+      .bird .beak-left {
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+        border-right: 36px solid #f7cd69; /* 三角形颜色 */
+        margin-top: 6px;
+        position: relative;
+        left: 11px;
+      }
+
+      .bird .beak-left-2 {
+        transform: rotate(-10deg);
+      }
+
+      .bird .head {
+        height: 50px;
+        width: 50px;
+        background-color: #f7cd69;
+        border-radius: 46%;
+        /* outline: solid 2px #000; */
+        position: relative;
+      }
+
+      .bird .eye {
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background-color: #000;
+        left: 15px;
+        position: absolute;
+        top: 16px;
+      }
+
+      .bird .body-container {
+        width: 150px;
+        height: 50px;
+        position: relative;
+        margin-top: 30px;
+        margin-left: -10px;
+      }
+
+      .bird .body {
+        width: 150px;
+      }
+
+      .bird .swing {
+        width: 100px;
+        position: absolute;
+      }
+
+      .bird .swing-1 {
+        transform: rotate(-60deg);
+        left: 20px;
+        top: -30px;
+      }
+
+      .bird .swing-2 {
+        width: 100px;
+        transform: rotate(-34deg);
+        left: 35px;
+        top: -28px;
+        position: absolute;
+      }
+
+      .bird .tail {
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-right: 50px solid #f7cd69; /* 三角形颜色 */
+        margin-top: 19px;
+        margin-left: -6px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bird">
+      <div class="beak-container">
+        <div class="beak-left"></div>
+        <div class="beak-left beak-left-2"></div>
+      </div>
+
+      <div class="head">
+        <div class="eye"></div>
+      </div>
+
+      <div class="body-container">
+        <svg viewBox="0 0 100 50" class="body">
+          <path
+            d="M5 0 Q 30 50 100 0"
+            stroke="none"
+            stroke-width="2"
+            fill="#f7cd69"
+          />
+        </svg>
+
+        <svg viewBox="0 0 100 50" class="swing swing-1">
+          <path
+            d="M5 0 Q 30 50 100 0"
+            stroke="none"
+            stroke-width="2"
+            fill="#f7cd69"
+          />
+        </svg>
+
+        <svg viewBox="0 0 100 50" class="swing swing-2">
+          <path
+            d="M5 0 Q 30 50 100 0"
+            stroke="none"
+            stroke-width="2"
+            fill="#f7cd69"
+          />
+        </svg>
+      </div>
+
+      <div class="tail"></div>
+    </div>
+  </body>
+</html>
